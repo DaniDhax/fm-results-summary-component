@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  /* ? COLOR */
+
+  /* Primary */
+  --light-red: hsl(0, 100%, 67%);
+  --light-red-alpha: hsla(0, 100%, 67%, 0.1);
+  --orangey-yellow: hsl(39, 100%, 56%);
+  --orangey-yellow-alpha: hsla(39, 100%, 56%, 0.1);
+  --green-teal: hsl(166, 100%, 37%);
+  --green-teal-alpha: hsla(166, 100%, 37%, 0.1);
+  --cobalt-blue: hsl(234, 85%, 45%);
+  --cobalt-blue-alpha: hsla(234, 85%, 45%, 0.1);
+
+  /* Gradients */
+  --light-slate-blue: hsl(252, 100%, 67%);
+  --light-royal-blue: hsl(241, 81%, 54%);
+
+  --violet-blue: hsla(256, 72%, 46%, 1);
+  --persian-blue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+
+  --white: hsl(0, 0%, 100%);
+  --pale-blue: hsl(221, 100%, 96%);
+  --lightllavender: hsl(241, 100%, 89%);
+  --dark-gray-blue: hsl(224, 30%, 27%);
+
+  /* ? FONTS */
+  --ff-hanken: "Hanken Grotesk", sans-serif;
+}
+
+/* ! GLOBAL RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.8rem;
+  font-family: var(--ff-hanken);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cream);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 35rem;
+  min-width: 30rem;
+  height: 100vh;
+  min-height: 100vh;
+  background-color: var(--white);
+  border: 1px solid black;
+}
+
+.cuadro-azul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(
+    to top,
+    hsl(241, 81%, 54%),
+    hsl(252, 100%, 67%)
+  );
+  color: var(--white);
+  border-radius: 0 0 3rem 3rem;
+}
+
+.cuadro-azul p:first-child {
+  /* Estilos para 'Your Result' */
+  font-size: 1.6rem;
+  margin: 1.5rem;
+}
+
+.cuadro-azul div {
+  /* Estilos para el círculo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.8rem;
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to top,
+    hsla(241, 72%, 46%, 0),
+    hsla(256, 72%, 46%, 1)
+  );
+  margin-bottom: 1.5rem;
+}
+
+.cuadro-azul div > p:first-of-type {
+  /* Estilos para '76' */
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.cuadro-azul div > p:last-of-type {
+  /* Estilos para 'of 100' */
+  font-size: 1.3rem;
+  color: var(--lightllavender);
+  font-weight: 700;
+  margin: 0;
+}
+
+.cuadro-azul p:nth-child(3) {
+  /* Estilos para 'Great' */
+  font-weight: 700;
+}
+
+.cuadro-azul p:last-child {
+  /* Estilos para 'You scored...' */
+  font-size: 1.2rem;
+  margin: 0.5rem 4rem 3.5rem 4rem;
+  text-align: center;
+  color: var(--lightllavender);
+}
+
+.cuadro-blanco > p:first-of-type {
+    /* Estilos para 'Summary' */
+  margin: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-gray-blue)
+}
+
+.cuadro-blanco div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin: 2rem;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    color: var(--dark-gray-blue);
+}
+
+.cuadro-blanco div > p:first-of-type {
+    display: flex;
+    margin: 0;
+    gap: 1rem;
+}
+
+.cuadro-blanco div span {
+    color: var(--lightllavender);
+}
+
+
+#reaction {
+    color: var(--light-red);
+    background-color: var(--light-red-alpha);
+}
+
+#memory {
+    color: var(--orangey-yellow);
+    background-color: var(--orangey-yellow-alpha);
+}
+
+#verbal {
+    color: var(--green-teal);
+    background-color: var(--green-teal-alpha);
+}
+
+#visual {
+    color: var(--cobalt-blue);
+    background-color: var(--cobalt-blue-alpha);
+}
