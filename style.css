@@ -59,10 +59,12 @@ p {
   font-size: 1.7rem;
   color: var(--light-lavender);
   margin: 25px;
+  font-weight: 700;
 }
 
 .result-circle {
   border: 1px solid black;
+  font-family: var(--ff-hanken-grotesk);
   width: 125px;
   height: 125px;
   border-radius: 50%;
