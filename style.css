@@ -17,6 +17,7 @@
   --pale-blue: hsl(221, 100%, 96%);
   --light-lavender: hsl(241, 100%, 89%);
   --dark-gray-blue: hsl(224, 30%, 27%);
+  --dark-gray-blue-alpha: hsl(224, 30%, 27%, 50%);
 
   /* Gradients */
   --light-slate-blue-background: hsl(252, 100%, 67%);
@@ -35,14 +36,15 @@ html {
 }
 
 .container {
-  border: 1px solid black;
   min-width: 375px;
   font-size: 1.3rem;
+  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-shadow: 5px 5px 20px var(--cobalt-blue-alpha);
 }
 
 body {
@@ -55,7 +57,6 @@ p {
 
 .section-result {
   width: 100%;
-  border: 1px solid black;
   border-radius: 0 0 25px 25px;
   color: white;
   background-image: linear-gradient(to bottom, hsl(252, 100%, 67%), hsl(241, 81%, 54%));
@@ -126,7 +127,6 @@ p {
 }
 
 .attribute {
-  border: 1px solid black;
   margin: 15px 0;
   border-radius: 10px;
   padding: 15px;
@@ -167,7 +167,7 @@ p {
 }
 
 .attribute span {
-  color: var(--light-lavender);
+  color: var(--dark-gray-blue-alpha);
 }
 
 button {
@@ -220,27 +220,20 @@ button {
   }
 
   .attribute {
-    border: 1px solid black;
-    margin: 15px 0;
-    border-radius: 10px;
     padding: 7px;
     justify-content: space-between;
     font-size: 1.2rem;
-    font-weight: 800;
+  }
+
+  .attribute > p:nth-child(2) {
+    width: 45px;
   }
 
   button {
-    cursor: pointer;
     width: 100%;
-    margin-top: 10px;
-    margin-bottom: 30px;
     padding: 10px 0;
-    border: none;
-    border-radius: 30px;
-    background-color: var(--dark-gray-blue);
     color: white;
     font-size: 1.3rem;
   }
-
 
 }
